@@ -37,7 +37,7 @@ class RegisterViewController: UIViewController {
         Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
             if error != nil{
                 print(error!)
-            }
+                SVProgressHUD.dismiss()            }
             else{
                 SVProgressHUD.dismiss()
                 print("registered success")
